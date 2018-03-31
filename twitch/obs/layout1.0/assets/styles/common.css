@@ -1,0 +1,132 @@
+body {
+  font-family: 'Days One', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #FFFFFF;
+}
+
+@keyframes animatedBackground {
+	/* 0% {
+    background-position: 100% 100%;
+  }
+	100% {
+    background-position: 0 0;
+  } */
+  from { transform: translate(0, 0); }
+to { transform: translate(50%, -50%); }
+}
+
+@keyframes fly-in-out {
+	0% {
+		transform: scale(0) translate3d(-200px, 0, 0);
+
+		border-radius: 50%;
+	}
+	8%, 92% {
+		color: rgba(255, 255, 255, 0.8);
+		text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+		transform: scale(1) translate3d(0, 0, 0);
+		background: transparent;
+		box-shadow: none;
+	}
+	100% {
+		color: transparent;
+		transform: scale(0) translate3d(200px, 0, 0);
+
+		border-radius: 50%;
+	}
+}
+.container {
+  /* background: linear-gradient(45deg, #673AB7, #9C27B0); */
+  background: linear-gradient(45deg, #980808, #e93921);
+  width: 1280px;
+  height: 720px;
+  position: absolute;
+  overflow:hidden;
+  top: 0px;
+  left: 0px;
+}
+
+.panel_container {
+  background: linear-gradient(45deg, #980808, #e93921);
+  width: 320px;
+  height: 100px;
+  position: absolute;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+
+}
+.panel_container .container-background{
+  background: url(../images/242_.jpg) repeat;
+  background-size: 30%;
+  mix-blend-mode: color-dodge;
+  opacity: .18;
+  position: absolute;
+  overflow: hidden;
+  width: 200%;
+  height: 200%;
+  bottom: -100%;
+  top: 0;
+  right: 0;
+  /* animation: animatedBackground 60s linear infinite; */
+}
+.panel_container .border {
+  border-color: #FFFFFF;
+  mix-blend-mode: overlay;
+  border: 8px solid;
+  width: 304px;
+  height: 84px;
+  margin-top: -92px;
+  opacity: .8;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+}
+.message p{
+  font-size: 28px;
+  text-align: center;
+}
+.container .container-background{
+  background: url(../images/ba_small.png) repeat;
+  background-size: 2%;
+  opacity: .25;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  bottom: -100%;
+  top: 0;
+  right: 0;
+  /* animation: animatedBackground 60s linear infinite; */
+}
+
+.container .header {
+  position: relative;
+  height: 40px;
+}
+
+.container .nickname {
+  position: absolute;
+  margin-left: 20px;
+  font-size: 30px;
+  text-shadow: 1px 1px 5px black;
+  top: -30px;
+  left: 10px;
+}
+
+.container .nickname {
+  animation: fly-in-out 10s infinite ease-in-out;
+}
+.screen {
+  border-color: #FFFFFF;
+  width: 1110px;
+  height: 625px;
+  margin-left: 150px;
+  border: 8px solid;
+  box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+}
+
+.webcam {
+  position: absolute;
+  border: 8px solid;
+  border-color: #FFFFFF;
+  width: 320px;
+  height: 240px;
+}
